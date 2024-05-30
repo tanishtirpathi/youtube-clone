@@ -10,26 +10,51 @@ body {
 .topbar {
   width: 100%;
   height: 50px;
-  background-color: black;
+  background: linear-gradient(
+    30deg,
+    rgb(204, 2, 2),
+    rgb(231, 7, 7),
+    rgb(117, 1, 1)
+  );
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .topbar-left {
   display: flex;
-  flex: 0.2;
+  /* flex: 0.2; */
   align-items: center;
+  margin-left: 20px;
   display: flex;
+  padding: 5px 10px;
   justify-content: center;
 }
-
+.topbar-left:hover {
+  box-shadow: 0px 0px 10px black;
+}
 .logo {
   font-size: 25px;
 }
-
+.logo:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.logo:hover h1 {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
 h1 {
   font-size: 20px;
   margin-left: 20px;
+}
+h1:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+h1:hover .logo {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .topbar-center {
@@ -84,14 +109,27 @@ h1 {
   height: 2px;
   background-color: white;
   border-radius: 20px;
-  transition: transform 1s ease, opacity 0.5s ease;
+  transition: transform 0.4s ease, opacity 0.5s ease;
   transform-origin: left;
+}
+.line-container:hover .line {
+  background-color: rgb(0, 0, 0);
 }
 
 .menu {
   width: 200px;
   height: calc(100vh - 50px);
-  background-color: black;
+  background: linear-gradient(
+    45deg,
+    rgba(202, 0, 0, 0.671),
+    rgb(214, 0, 0),
+    rgb(192, 0, 0),
+    rgb(133, 0, 0),
+    rgb(92, 20, 20),
+    rgb(136, 0, 0),
+    rgb(59, 0, 0),
+    rgb(0, 0, 0)
+  );
   position: absolute;
   top: 50px;
   right: -250px;
@@ -99,7 +137,7 @@ h1 {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .menu-top {
@@ -145,6 +183,11 @@ h1 {
 
 .menu-item span {
   margin-left: 10px;
+  font-weight: 800;
+}
+.menu-item span:hover {
+  color: black;
+  font-weight: 800;
 }
 
 .menu-bottom {
